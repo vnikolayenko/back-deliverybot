@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "back.fullname" . }}
-  namespace: {{ include "back.fullname" . }}
+  namespace: {{ .Release.Namespace }}
 spec:
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       {{- include "back.selectorLabels" . | nindent 6 }}

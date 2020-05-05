@@ -1,8 +1,9 @@
+{{- if .Values.service.enabled -}}
 apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "back.fullname" . }}-srv
-  namespace: {{ include "back.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "back.labels" . | nindent 4 }}
 spec:
@@ -12,3 +13,4 @@ spec:
     targetPort: {{ .Values.targetPort }}
   selector:
     {{- include "back.selectorLabels" . | nindent 4 }}
+{{- end }}
