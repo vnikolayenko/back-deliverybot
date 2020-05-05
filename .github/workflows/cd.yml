@@ -21,9 +21,7 @@ jobs:
           access_key: '${{ secrets.db_access_key}}'
           secret_key: '${{ secrets.db_secret_key}}'
           region: 'us-west-2'
-        release: 'back'
         namespace: 'back'
         helm: helm3
-        track: canary
       env:
         KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
