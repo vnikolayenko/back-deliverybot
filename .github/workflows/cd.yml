@@ -17,7 +17,7 @@ jobs:
         secrets: '${{ toJSON(secrets) }}'
         version: '${{ github.sha }}'
         chart: './back'
-        values: 
+        values: | 
           access_key: '{{ secrets.db_access_key}}'
           secret_key: '{{secrets.db_secret_key}}'
           region: 'us-west-2'
