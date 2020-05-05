@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "back.fullname" . }}
-  namespace: {{ include "back.fullname" . }}
+  namespace: back
 spec:
   selector:
     matchLabels:

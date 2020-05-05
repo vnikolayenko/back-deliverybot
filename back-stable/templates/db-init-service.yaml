@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "back.fullname" . }}-srv
-  namespace: {{ include "back.fullname" . }}
+  namespace: back
   labels:
     {{- include "back.labels" . | nindent 4 }}
 spec:
