@@ -21,21 +21,3 @@ secretFile: "awsecr-cred"
 
 registry: "074368059797.dkr.ecr.eu-central-1.amazonaws.com/back"
 tag: "latest"
-app:
-  # app.name -- Application name: Can be consistent between tracks. (required)
-  name: null
-  # app.version -- Application version: Unique tag for this release. (required)
-  version: null
-service:
-  # service.enabled -- Enable service resource.
-  enabled: true
-ingress:
-  # ingress.enabled -- Enable ingress resource.
-  enabled: false
-# env -- Environment variables for the application.
-env: []
-# - name: ENVIRONMENT
-#   value: production
-secrets: []
-# - name: TEST
-#   value: "foobar"

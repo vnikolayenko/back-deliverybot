@@ -16,12 +16,6 @@ jobs:
         token: '${{ github.token }}'
         secrets: '${{ toJSON(secrets) }}'
         version: '${{ github.sha }}'
-        chart: './back'
-        values: |
-          access_key: '${{ secrets.db_access_key}}'
-          secret_key: '${{ secrets.db_secret_key}}'
-          region: 'us-west-2'
-        namespace: 'back'
-        helm: helm3
+        chart: './back-stable'
       env:
         KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
