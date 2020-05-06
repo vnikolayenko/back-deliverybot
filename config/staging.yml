@@ -1,3 +1,6 @@
 env:
 - name: ENVIRONMENT
   value: staging
+region: 'us-west-2'
+access_key: '${{ secrets.akey }}'
+secret_key: '${{ secrets.skey }}'
