@@ -16,7 +16,7 @@ jobs:
         release: 'review-back-${{ github.event.pull_request.number }}'
         version: '${{ github.sha }}'
         track: 'stable'
-        chart: './back-stable'
+        chart: './back'
         namespace: 'back'
         token: '${{ github.token }}'
       env:
