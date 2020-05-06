@@ -11,7 +11,10 @@ canary:
     release: production-back
     namespace: back
     track: canary
-    values:
+    values: |
+      access_key: '{{ secrets.db_access_key}}'
+      secret_key: '{{secrets.db_secret_key}}'
+      region: 'us-west-2'
       replicaCount: 2
 
 # Deployment to a production environment is kicked off manually. This actually
@@ -31,6 +34,9 @@ production:
     namespace: back
     track: stable
     values:
+      access_key: '{{ secrets.db_access_key}}'
+      secret_key: '{{secrets.db_secret_key}}'
+      region: 'us-west-2'      
       replicaCount: 5
 
 # Automatic deployment to a staging environment on every push to master.
@@ -46,6 +52,9 @@ staging:
     namespace: back
     track: stable
     values:
+      access_key: '{{ secrets.db_access_key}}'
+      secret_key: '{{secrets.db_secret_key}}'
+      region: 'us-west-2'      
       replicaCount: 1
 
 # Review environments can be triggered with /deploy review inside a pull
@@ -66,4 +75,7 @@ review:
     namespace: back
     track: stable
     values:
+      access_key: '{{ secrets.db_access_key}}'
+      secret_key: '{{secrets.db_secret_key}}'
+      region: 'us-west-2'      
       replicaCount: 1
