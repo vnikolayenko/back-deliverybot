@@ -2,5 +2,5 @@ env:
 - name: ENVIRONMENT
   value: review
 region: 'us-west-2'
-access_key: '${{ secrets.akey }}'
-secret_key: '${{ secrets.skey }}'
+access_key: '${{ secrets.db_access_key }}'
+secret_key: '${{ secrets.db_secret_key }}'
