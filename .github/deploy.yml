@@ -33,7 +33,7 @@ production:
     release: production-back
     namespace: back
     track: stable
-    values:
+    values: |
       access_key: '{{ secrets.db_access_key}}'
       secret_key: '{{secrets.db_secret_key}}'
       region: 'us-west-2'      
@@ -51,7 +51,7 @@ staging:
     release: staging-back
     namespace: back
     track: stable
-    values:
+    values: |
       access_key: '{{ secrets.db_access_key}}'
       secret_key: '{{secrets.db_secret_key}}'
       region: 'us-west-2'      
@@ -74,7 +74,7 @@ review:
     release: review-back-${{ pr }}
     namespace: back
     track: stable
-    values:
+    values: |
       access_key: '{{ secrets.db_access_key}}'
       secret_key: '{{secrets.db_secret_key}}'
       region: 'us-west-2'      
