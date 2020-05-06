@@ -22,6 +22,6 @@ jobs:
         values: |
           access_key: '${{ secrets.db_access_key }}'
           secret_key: '${{ secrets.db_secret_key }}'
-          region: 'us-west-2'
+          region: us-west-2
       env:
         KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
