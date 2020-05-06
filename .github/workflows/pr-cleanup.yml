@@ -20,8 +20,8 @@ jobs:
         namespace: 'back'
         token: '${{ github.token }}'
         values: |
-          access_key: '${{ secrets.db_access_key}}'
-          secret_key: '${{secrets.db_secret_key}}'
+          access_key: '${{ secrets.db_access_key }}'
+          secret_key: '${{ secrets.db_secret_key }}'
           region: 'us-west-2'
       env:
         KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
